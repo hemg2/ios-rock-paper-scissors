@@ -1,6 +1,5 @@
 # 👊✌️✋묵찌빠
 
-## 📖 목차
 
 ## 📖 목차
 1. [소개](#-소개)
@@ -22,11 +21,11 @@
 
 ---
 
-## 👨‍💻 팀원  사진 링크추가
+## 👨‍💻 팀원
 
 | yy-ss99 | Hemg |
 | --- | --- |
-| <Img src = "https://i.imgur.com/ltt6W14.jpg" width="250" /> | <Img src="https://user-images.githubusercontent.com/101572902/235090676-acefc28d-a358-486b-b9a6-f9c84c52ae9c.jpeg" width="200"> |
+| <Img src = "https://i.imgur.com/ltt6W14.jpg" width="250" height="300" /> | <Img src="https://user-images.githubusercontent.com/101572902/235090676-acefc28d-a358-486b-b9a6-f9c84c52ae9c.jpeg" width="250" height="300"> |
 | [Github Profile](https://github.com/yy-ss99) | [Github Profile](https://github.com/hemg2)|
 
 ---
@@ -35,7 +34,7 @@
 
 | 가위바위보 |
 |:--:|
-|<img height="800" width="500" src="https://i.imgur.com/zkXx1i9.png">
+|<img height="900" width="500" src="https://i.imgur.com/zkXx1i9.png">
 
 |묵찌빠 (사용자 승리) 묵찌빠 (컴퓨터 승리) |
 |:--:|
@@ -75,7 +74,7 @@
 
 # 트러블 슈팅
 
-- 함수의 기능 분리
+## 함수의 기능 분리
 - 처음 showGameMenu()에는 메뉴출력, 메뉴 입력, 컴퓨터입력값 출력 여러가지 일을 진행했습니다.
 - 함수는 하나의 기능을 하기 위해 함수를 분할하고 테스트 해보면서 진행했습니다.
 
@@ -108,7 +107,7 @@ guard let userInput: String = readLine() else { return }
     }
 ```
 
-- 0번 호출시 게임종료(x) 함수 실행 이슈
+## 0번 호출시 게임종료(x) 함수 실행 이슈
 - checkGameEnd()의 함수 생성이후   showGameMenu() 에서 실행할시에 checkValidInput() 함수와 같이 실행이 되어 “0” 눌러도 게임종료후 리턴되어 빠져나가지않고 다음 함수인 checkValidInput() 함수까지 실행되어 checkValidInput()함수의 default로 넘어가게되어  checkGameEnd()함수에서 잘못 입력시 리턴  되지 않았습니다. 이러한 방법을 해결하기 위해 따로 함수 구현을 진행하지 않고 showGameMenu() 에서 guard를 사용 하여 예외 처리시에 함수가 리턴되어 종료 되게끔 진행했습니다.
 
 ```swift
@@ -139,7 +138,7 @@ private func checkValidInput(with userInput: String, _ computerInput: String, _ 
     }
 ```
 
-- 가독성 문제
+## 가독성 문제
     - 매개변수 타입을 String에서 Enum타입으로 변경하였음. 변경 전에는 받아온 인수를 비교하기 위해 `MuckJjiBbaSign.Muck.rawValue` 와 같이 표현해야 했는데 `.Muck`로 바꿀 수 있었음
 - 반복되는 print문
 
